@@ -1,0 +1,30 @@
+#spring:
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: "true"
+#    properties: 
+#      hibernate:
+#        dialect: "org.hibernate.dialect.MySQL5Dialect"
+#  database:
+#    driverClassName: "com.mysql.jdbc.Driver"
+#  datasource:
+#    url: "jdbc:mysql://localhost:3306/itemsharingdatabase"
+#    username: "root"
+#    password: "root"
+#    testWhileIdle: "true"
+#    validationQuery: "SELECT 1"
+
+server:
+  port : 5555
+  
+eureka:
+  instance:
+    perferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/ 
